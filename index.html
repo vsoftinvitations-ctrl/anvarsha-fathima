@@ -942,6 +942,11 @@
         time: "4:00 PM onwards",
         venue: "Aishwariya Auditorium, Ambalappuzha"
       },
+      groomReception: {
+        date: "10 January 2027",
+        day: "Sunday",
+        time: "5:00 PM onwards"
+      },
       tagline: "A celebration of love, family & togetherness",
       quotes: [
         "Our love began as a story, and today we make a promise to turn it into forever.",
@@ -972,7 +977,7 @@
     /* ===== Render ===== */
     const orn = '<svg class="orn r" viewBox="0 0 150 18" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M0 9h55M95 9h55"/><circle cx="75" cy="9" r="4"/><circle cx="65" cy="9" r="2.5"/><circle cx="85" cy="9" r="2.5"/></svg>';
     const pin = '<svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0114 0C19 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></svg>';
-    const D = W.date, V = W.venue, M = W.mehendiReception;
+    const D = W.date, V = W.venue, M = W.mehendiReception, G = W.groomReception;
 
     document.getElementById('app').innerHTML = `
 <section id="hero">
@@ -1042,12 +1047,22 @@
   </div>
 </div></section>
 
-<section class="alt"><div class="wrap">
-  <p class="label r" style="line-height:2">Bride side<br>Mehendi &amp; Reception</p>
-  <h2 class="big r" style="font-size:clamp(1.8rem, 1rem + 3vw, 2.6rem)">${M.day}, ${M.date}</h2>
-  <div class="time r">${M.time}</div>
-  <div class="rule line-x r"></div>
-  <p class="small r" style="font-size:1rem">${M.venue}</p>
+<section class="alt"><div class="wrap" style="max-width:900px">
+  <div class="fam" style="margin-top:0">
+    <div class="r">
+      <p class="label" style="line-height:2">Bride side<br>Mehendi &amp; Reception</p>
+      <h2 class="big" style="font-size:clamp(1.6rem, 1rem + 2.2vw, 2.2rem)">${M.day}, ${M.date}</h2>
+      <div class="time">${M.time}</div>
+      <div class="rule line-x"></div>
+      <p class="small" style="font-size:1rem">${M.venue}</p>
+    </div>
+    <div class="sep line-x"></div>
+    <div class="r">
+      <p class="label" style="line-height:2">Groom side<br>Reception</p>
+      <h2 class="big" style="font-size:clamp(1.6rem, 1rem + 2.2vw, 2.2rem)">${G.day}, ${G.date}</h2>
+      <div class="time">${G.time}</div>
+    </div>
+  </div>
 </div></section>
 
 <section><div class="wrap">
